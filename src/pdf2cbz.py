@@ -22,5 +22,3 @@ def pdf_to_cbz(pdf_path: str | Path, cbz_output_path: str | Path = "output.cbz",
             cbz.write(str(image_path), image_path.name)
 
     shutil.rmtree(str(temp_folder))
-
-    print("Done!")
