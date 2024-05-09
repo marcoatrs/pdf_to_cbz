@@ -34,27 +34,6 @@ class Ui_Pdf2Cbz(object):
         self.frame.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_3 = QGridLayout(self.frame)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
-        self.horizontalLayout = QHBoxLayout()
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.horizontalLayout.addItem(self.horizontalSpacer)
-
-        self.pb_add_file = QPushButton(self.frame)
-        self.pb_add_file.setObjectName(u"pb_add_file")
-        self.pb_add_file.setCursor(QCursor(Qt.PointingHandCursor))
-
-        self.horizontalLayout.addWidget(self.pb_add_file)
-
-        self.pb_add_folder = QPushButton(self.frame)
-        self.pb_add_folder.setObjectName(u"pb_add_folder")
-        self.pb_add_folder.setCursor(QCursor(Qt.PointingHandCursor))
-
-        self.horizontalLayout.addWidget(self.pb_add_folder)
-
-
-        self.gridLayout_3.addLayout(self.horizontalLayout, 0, 0, 1, 1)
-
         self.table_conversion = QTableWidget(self.frame)
         if (self.table_conversion.columnCount() < 3):
             self.table_conversion.setColumnCount(3)
@@ -73,6 +52,37 @@ class Ui_Pdf2Cbz(object):
 
         self.gridLayout_3.addWidget(self.table_conversion, 1, 0, 1, 1)
 
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.horizontalLayout.addItem(self.horizontalSpacer)
+
+        self.pb_add_file = QPushButton(self.frame)
+        self.pb_add_file.setObjectName(u"pb_add_file")
+        self.pb_add_file.setCursor(QCursor(Qt.PointingHandCursor))
+
+        self.horizontalLayout.addWidget(self.pb_add_file)
+
+
+        self.gridLayout_3.addLayout(self.horizontalLayout, 0, 0, 1, 1)
+
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.horizontalLayout_2.addItem(self.horizontalSpacer_2)
+
+        self.pb_create = QPushButton(self.frame)
+        self.pb_create.setObjectName(u"pb_create")
+        self.pb_create.setCursor(QCursor(Qt.PointingHandCursor))
+
+        self.horizontalLayout_2.addWidget(self.pb_create)
+
+
+        self.gridLayout_3.addLayout(self.horizontalLayout_2, 2, 0, 1, 1)
+
+        self.gridLayout_3.setRowStretch(1, 1)
 
         self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
 
@@ -85,13 +95,13 @@ class Ui_Pdf2Cbz(object):
 
     def retranslateUi(self, Pdf2Cbz):
         Pdf2Cbz.setWindowTitle(QCoreApplication.translate("Pdf2Cbz", u"Pdf 2 Cbz", None))
-        self.pb_add_file.setText(QCoreApplication.translate("Pdf2Cbz", u"+ Add File", None))
-        self.pb_add_folder.setText(QCoreApplication.translate("Pdf2Cbz", u"+ Add Folder", None))
         ___qtablewidgetitem = self.table_conversion.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("Pdf2Cbz", u"Title", None));
         ___qtablewidgetitem1 = self.table_conversion.horizontalHeaderItem(1)
         ___qtablewidgetitem1.setText(QCoreApplication.translate("Pdf2Cbz", u"Conversion status", None));
         ___qtablewidgetitem2 = self.table_conversion.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("Pdf2Cbz", u"Open in folder", None));
+        self.pb_add_file.setText(QCoreApplication.translate("Pdf2Cbz", u"+ Add Files", None))
+        self.pb_create.setText(QCoreApplication.translate("Pdf2Cbz", u"Create cbz", None))
     # retranslateUi
 
